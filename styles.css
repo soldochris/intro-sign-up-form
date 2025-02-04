@@ -73,17 +73,50 @@ main{
     gap: 18px;
     box-shadow: 0px 8px 5px rgb(0, 0, 0, 20%);
 
-    & input{
+    & .input-container{
       width: 100%;
-      padding: 16px;
-      border: 1px solid var(--Grayish-Blue);
-      border-radius: 6px;
+      position: relative;
+
+      & input{
+        width: 100%;
+        padding: 16px;
+        border: 1px solid var(--Grayish-Blue);
+        border-radius: 6px;
+      }
+  
+      & input::placeholder{
+        color: var(--Dark-Blue);
+        font-weight: 500;
+      }
+
+      & .icon-error{
+        display: none;
+        position: absolute;
+        right: 16px;
+        top: 14px;
+      }
+
+      & .error-message{
+        display: none;
+        color: var(--Red);
+        font-size: 12px;
+        text-align: right;
+        margin-bottom: 0;
+      }
+
+      & .empty-message{
+        text-align: right;
+        display: none;
+        color: var(--Red);
+        font-size: 12px;
+        margin-bottom: 0;
+      }
+
+      & .visible{
+        display: block;
+      }
     }
 
-    & input::placeholder{
-      color: var(--Dark-Blue);
-      font-weight: 500;
-    }
 
     & .submit-btn{
       width: 100%;
@@ -93,17 +126,23 @@ main{
       border-radius: 6px;
       color: #fff;
       text-transform: uppercase;
-      box-shadow: inset 0px 0px 10px rgba(0,0,0,0.2);
+      box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
       cursor: pointer;
+      font-weight: 500;
     }
 
-    & p{
+    & .submit-btn:hover{
+      opacity: .7;
+    }
+
+    & .terms-agreement{
       color: var(--Grayish-Blue);
       font-size: 12px;
 
       & a{
         color: var(--Red);
         text-decoration: none;
+        font-weight: 600;
       }
     }
   }
@@ -124,5 +163,24 @@ footer{
 @media(width > 430px){
   body{
     background-image: url("images/bg-intro-desktop.png");
+  }
+
+  main{
+    flex-direction: row;
+    max-width: 980px;
+    gap: 16px;
+  }
+
+  .hero{
+    flex-basis: 50%;
+    text-align: left;
+  }
+
+  .content{
+    flex-basis: 50%;
+
+    .pill{
+      width: 100%;
+    }
   }
 }
