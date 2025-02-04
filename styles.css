@@ -12,4 +12,117 @@
 body{
   font-family: "Poppins", sans-serif;
   font-size: 16px;
+  background-image: url("images/bg-intro-mobile.png");
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--Red);
+}
+
+main{
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  color: #fff;
+}
+
+.hero{
+  margin: 22px 0;
+  & p{
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  & .pill{
+    background-color: var(--Blue);
+    border-radius: 8px;
+    padding: 6px 40px;
+    line-height: 1.5;
+    box-shadow: 0px 8px 5px rgb(0, 0, 0, 20%);
+
+    & p{
+      font-weight: 400;
+
+      & span{
+        font-weight: 700;
+      }
+    }
+  }
+
+  & form{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 18px;
+    box-shadow: 0px 8px 5px rgb(0, 0, 0, 20%);
+
+    & input{
+      width: 100%;
+      padding: 16px;
+      border: 1px solid var(--Grayish-Blue);
+      border-radius: 6px;
+    }
+
+    & input::placeholder{
+      color: var(--Dark-Blue);
+      font-weight: 500;
+    }
+
+    & .submit-btn{
+      width: 100%;
+      background-color: var(--Green);
+      border: none;
+      padding: 16px;
+      border-radius: 6px;
+      color: #fff;
+      text-transform: uppercase;
+      box-shadow: inset 0px 0px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+
+    & p{
+      color: var(--Grayish-Blue);
+      font-size: 12px;
+
+      & a{
+        color: var(--Red);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+footer{
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  padding: 12px;
+
+  & a{
+    color: var(--Blue);
+    text-decoration: none;
+  }
+}
+
+@media(width > 430px){
+  body{
+    background-image: url("images/bg-intro-desktop.png");
+  }
 }
