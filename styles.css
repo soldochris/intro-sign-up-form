@@ -169,6 +169,7 @@ footer{
     flex-direction: row;
     max-width: 980px;
     gap: 16px;
+    margin-top: 32px;
   }
 
   .hero{
